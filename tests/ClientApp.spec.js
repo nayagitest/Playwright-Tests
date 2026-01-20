@@ -11,7 +11,7 @@ test.only('Automating rahulshetty lets shop page', async ({browser,page}) =>
      await userEmail.fill("july@gmail.com");
      await page.locator("#userPassword").fill("Learning2.");
      await logIn.click();
-     //await page.locator("#res").waitFor();
+     //await page.locator("#res").first().waitFor();
      console.log(await page.locator("#res").textContent());
      //await page.waitForLoadState('networkidle')
       const allTitles = await cardTitles.allTextContents();
